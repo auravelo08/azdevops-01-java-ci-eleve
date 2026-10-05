@@ -3,7 +3,7 @@
 ## Identité du livrable
 
 - Auteur / binôme : Aurélia
-- Date et durée réelle : 05/10
+- Date et durée réelle : 05/10/2026
 - URL du dépôt personnel : https://github.com/auravelo08/azdevops-01-java-ci-eleve
 - SHA de la version livrée :
 
@@ -45,3 +45,11 @@ Quelle vérification manquerait si l'on testait uniquement que le serveur démar
 - chemin inconnu / inexistant : GET/chemininconnu > 404 et erreur JSON
 - méthode interdite : POST /api/quotes > 405, en-tête Allow: GET
 - préfixe trompeur : GET/health/private > 404 et erreur JSON
+
+Schéma de compréhension : 
+source : crée le code Java : 
+- Si Phase de test OK : le JAR (fichier qui contient l'appli mais qui est lancé par une commande) peut etre lancé (donc l'appli sera lancé) 
+- Si test PAS OK : on revoit le code l'appli, pas de JAR.
+CI en fonction des tests (les tests sont relancés à chaque modif ensuite le fichier JAR est fait) :
+- SI OK : le fichier JAR est produit et affiche vert 
+- SI PAS OK : pas de JAR et affiche rouge et les modifications ne sont pas prises en compte donc pas fusionnée à la branch main
