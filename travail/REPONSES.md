@@ -2,9 +2,9 @@
 
 ## Identité du livrable
 
-- Auteur / binôme :
-- Date et durée réelle :
-- URL du dépôt personnel :
+- Auteur / binôme : Aurélia
+- Date et durée réelle : 05/10
+- URL du dépôt personnel : https://github.com/auravelo08/azdevops-01-java-ci-eleve
 - SHA de la version livrée :
 
 ## Décisions
