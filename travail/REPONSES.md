@@ -36,3 +36,12 @@ Ce que les vérifications prouvent :
 Ce qu'elles ne prouvent pas :
 
 Prochaine amélioration proposée et raison :
+
+Étape 1 - Comprendre avant d'écrire : 
+Quel est le lien entre une réponse HTTP et une assertion ? Une assertion vérifie la réponse à la suite de la requête HTTP.
+Quelle vérification manquerait si l'on testait uniquement que le serveur démarre ? On vérifie seulement que le serveur démarre sans vérifier les requêtes effectuées et réponses reçues. 
+
+- cas nominal (tout se passe comme prévu) : GET /health 200 > JSON {"status":"UP"}
+- chemin inconnu / inexistant : GET/chemininconnu > 404 et erreur JSON
+- méthode interdite : POST /api/quotes > 405, en-tête Allow: GET
+- préfixe trompeur : GET/health/private > 404 et erreur JSON
